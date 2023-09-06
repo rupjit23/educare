@@ -197,7 +197,7 @@ exports.sendotp = async (req, res) => {
       })
     }
 
-    var otp = otpGenerator.generate(6, {
+    var otp = otpGenerator.generate(5, {
       upperCaseAlphabets: false,
       lowerCaseAlphabets: false,
       specialChars: false,
@@ -207,7 +207,7 @@ exports.sendotp = async (req, res) => {
     console.log("OTP", otp)
     console.log("Result", result)
     while (result) {
-      otp = otpGenerator.generate(6, {
+      otp = otpGenerator.generate(5, {
         upperCaseAlphabets: false,
       })
     }
